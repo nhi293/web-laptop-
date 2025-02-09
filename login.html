@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+    <!-- Google Fonts Link For Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="css/Login.css">
+    <script src="js/Login.js" defer></script>
+
+    <style>
+        body {
+            height: 100vh;
+            width: 100%;
+            background: url("img/hero-bg.jpg") center/cover no-repeat;
+        }
+        .login .form-details {
+            padding: 0 40px;
+            background: url("img/login-img.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        .signup .form-details {
+            padding: 0 20px;
+            background: url("img/signup-img.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <span class="hamburger-btn material-symbols-rounded">menu</span>
+            <a href="trangchu.php" class="logo">
+                <img src="img/logonew1.png" alt="logo">
+                <h2></h2>
+            </a>
+            <ul class="links">
+                <span class="close-btn material-symbols-rounded">close</span>
+                <li><a href="trangchu.php">Trang Chủ</a></li>
+                <li><a href="Aplle.php">Danh Mục</a></li>
+                <li><a href="contactus.html">Liên Hệ</a></li>
+                <li><a href="docs.html">Tài Liệu</a></li>
+            </ul>
+            <button class="login-btn">LOG IN</button>
+        </nav>
+    </header>
+    <div class="blur-bg-overlay"></div>
+    <div class="form-popup">
+        <span class="close-btn material-symbols-rounded">close</span>
+
+        <!-- Form Đăng Nhập -->
+        <div class="form-box login">
+            <div class="form-details">
+                <h2>Welcome Back</h2>
+                <p>Please log in using your personal information to stay connected with us.</p>
+            </div>
+            <div class="form-content">
+                <h2>LOGIN</h2>
+                <form action="./html_backend/login.php" method="POST">
+                    <input type="hidden" name="dangnhap" value="true">
+                    <div class="input-field">
+                        <input type="text" required name="user" placeholder="Tên Đăng Nhập">
+                    </div>
+                    <div class="input-field">
+                        <input type="password" required name="pass" placeholder="Mật Khẩu">
+                    </div>
+                    <a href="#" class="forgot-pass-link">Forgot password?</a>
+                    <button type="submit">Log In</button>
+                    <div class="bottom-link">
+                        Don't have an account?
+                        <a href="#" id="signup-link">Signup</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Form Đăng Ký -->
+        <div class="form-box signup">
+            <div class="form-details">
+                <h2>Create Account</h2>
+                <p>To become a part of our community, please sign up using your personal information.</p>
+            </div>
+            <div class="form-content">
+                <h2>SIGNUP</h2>
+                <form action="./html_backend/register.php" method="POST">
+                    <div class="input-field">
+                        <input type="email" name="email" id="email" required placeholder="Email">
+                    </div>
+                    <div class="input-field">
+                        <input type="text" name="nguoi_dung" id="nguoi_dung" required placeholder="Tên Người Dùng">
+                    </div>
+                    <div class="input-field">
+                        <input type="password" name="mat_khau" id="mat_khau" required placeholder="Mật Khẩu">
+                    </div>
+                    <button type="submit" class="submit-btn">Đăng Ký</button>
+                    <div class="bottom-link">
+                        Already have an account? 
+                        <a href="#" id="login-link">Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
