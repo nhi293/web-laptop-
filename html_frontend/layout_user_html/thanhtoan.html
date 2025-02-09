@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Thanh Toán</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+        }
+
+        .khung-thanh-toan {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+
+        .khung-thanh-toan h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .thong-tin-thanh-toan {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .ma-qr img {
+            width: 150px;
+            height: 150px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .chi-tiet-thanh-toan p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .chi-tiet-thanh-toan strong {
+            color: #333;
+        }
+
+        .nut-xac-nhan {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .nut-xac-nhan:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="khung-thanh-toan">
+        <h1>Thanh Toán</h1>
+        
+        <div class="thong-tin-thanh-toan">
+            <div class="ma-qr">
+                <img src="/img/qrcode.jpg" alt="QR Code">
+            </div>
+            <div class="chi-tiet-thanh-toan">
+                <p>Vui lòng quét mã để thanh toán</p>
+                <p><strong>Số tiền:</strong> 500.000 VND</p>
+                <p><strong>Thông tin thanh toán:</strong> Tên người nhận, Số tài khoản</p>
+            </div>
+        </div>
+        
+        <button  class="nut-xac-nhan">Xác Nhận Thanh Toán</button>
+    </div>
+</body>
+</html>
