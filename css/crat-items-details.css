@@ -1,0 +1,304 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "jost", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10%;
+  background-color: #ff523b;
+}
+
+.logo img {
+  max-width: 80px;
+  height: auto;
+}
+
+.navmenu {
+  display: flex;
+}
+
+.navmenu > li {
+  position: relative;
+}
+
+.navmenu a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 400;
+  transition: all 0.42s ease;
+}
+
+.navmenu-link:hover {
+  color: #ee1c47;
+}
+
+.navmenu ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #ee1c47;
+  box-shadow: 0px 8px 16px 0px rgba(150, 23, 23, 0.2);
+  z-index: 1;
+  border-radius: 20%;
+}
+
+.navmenu ul a {
+  padding: 12px 16px;
+  color: rgb(253, 1, 1);
+  background-color: #f9f9f9;
+  text-decoration: none;
+  display: block;
+}
+
+.navmenu ul li a {
+  /* Các thuộc tính CSS bạn muốn áp dụng cho tất cả các mục trong menu con */
+  color: #fbfbfb; /* Ví dụ: thay đổi màu chữ thành đỏ */
+  font-weight: bold; /* Ví dụ: làm chữ đậm */
+  background-color: #ff523b; /* Ví dụ: thay đổi màu nền thành vàng */
+}
+
+.navmenu ul a:hover {
+  background-color: #f1f1f1;
+}
+
+.navmenu > li:hover ul {
+  display: block;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+}
+
+.navmenu a {
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  font-weight: 400;
+  transition: all 0.42s ease;
+}
+
+.navmenu a:hover {
+  color: #ee1c47;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+}
+
+.nav-icon i {
+  margin-right: 20px;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 400;
+  transition: all 0.42s ease;
+}
+
+.nav-icon i:hover {
+  transform: scale(1.1);
+  color: #ee1c47;
+}
+
+#menu-icon {
+  font-size: 35px;
+  color: #ffffff;
+  z-index: 10001;
+  cursor: pointer;
+}
+
+section {
+  padding: 60px 12%;
+}
+
+.small-container {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.cart-page {
+  margin: 80px auto;
+  margin-top: 150px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+th {
+  text-align: left;
+  padding: 5px;
+  color: #fff;
+  background-color: #ff523b;
+  font-weight: normal;
+}
+
+td {
+  padding: 10px 5px;
+}
+
+td input {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+}
+
+td a {
+  color: #ff523b;
+  font-size: 12px;
+}
+
+td img {
+  width: 100px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.total-price {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.total-price table {
+  border-top: 3px solid #ff523b;
+  width: 100%;
+  max-width: 350px;
+}
+
+td:last-child {
+  text-align: right;
+}
+
+td:last-child {
+  text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+  row {
+    text-align: center;
+  }
+  .cart-info p {
+    display: none;
+  }
+}
+.contact {
+  background-color: #f3f4f6;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+  gap: 3rem;
+}
+
+.first-info {
+  width: 100%;
+  height: auto;
+  margin-top: -35px;
+}
+
+.contact-info h4 {
+  color: #212529;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  color: #565656;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.42s;
+}
+
+.contact-info p:hover {
+  color: #ee1c47;
+}
+
+.social-icon {
+  color: #565656;
+  margin-right: 10px;
+  font-size: 20px;
+  transition: all 0.42s;
+}
+
+.social-icon i:hover {
+  transform: scale(1.3);
+}
+
+/*Reponsive-css*/
+@media (max-width: 890px) {
+  header {
+    padding: 20px 3%;
+    transition: 0.4s;
+  }
+}
+@media (max-width: 630px) {
+  .main-text h1 {
+    font-size: 50px;
+    transition: 0.4s;
+  }
+  .main-text p {
+    font-size: 18px;
+    transition: 0.4s;
+  }
+  .main-btn {
+    padding: 10px 20px;
+    transition: 0.4s;
+  }
+}
+@media (max-width: 750px) {
+  .navmenu {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 300px;
+    height: 130vh;
+    background: #e96668;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 30px;
+    transition: all 0.42s;
+  }
+  .navmenu a {
+    display: block;
+    margin: 18px 0;
+  }
+  .navmenu.open {
+    right: 0;
+  }
+}/*# sourceMappingURL=crat-items-details.css.map */
